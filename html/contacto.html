@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>formulario</title>
+  <link rel="stylesheet" href="../style/estilos.css">
+
+
+</head>
+
+<body class="fondo-contacto">
+  <h1>contacto html </h1>
+  <form name="formulario1" id="formulario1" autocomplete="off" method="get" action="llegada.html">
+    <fieldset class="cubo-1">
+
+
+      <div class="uno">
+
+        <p>nombre (obligatorio)</p>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="dos">
+
+
+
+        <p>Apellido (obligatorio)</p>
+        <input type="text" id="apellido" name="apellido">
+      </div>
+
+      <br><br>
+
+
+      <div>
+
+
+        <label for="email">Email (obligatorio)</label>
+
+        <br>
+        <input type="email" id="email" name="email">
+      </div>
+    </fieldset>
+    <fieldset class="cubo-1">
+      <p>cuenta algo mas acerca de tu experiencia</p>
+      <label for="textogrande"> </label>
+      <textarea rows="4" cols="50" id="textogrande"></textarea>
+
+
+    </fieldset>
+
+
+
+  </form>
+
+
+
+
+
+
+  <script>
+    function comenzar() {
+      var name = document.getElementById("name");
+      var apellido = document.getElementById("apellido");
+      var email = document.getElementById("email");
+
+
+
+      if (name.value == "") {
+        name.setCustomValidity("Este campo no puede estar vacío.");
+        name.style.background = "#ffdddd"
+
+
+      } else {
+        name.setCustomValidity("");
+        name.style.background = "#ffffff"
+
+
+      }
+
+      if (apellido.value == "") {
+        apellido.setCustomValidity("Este campo no puede estar vacio.");
+        apellido.style.background = "#ffdddd"
+      }
+
+      else {
+        apellido.setCustomValidity("");
+        apellido.style.background = "#ffffff"
+      }
+
+      if (email.value == "") {
+        email.setCustomValidity("Este campo no puede estar vacio. ");
+        email.style.background = "#ffdddd"
+      }
+
+      else {
+        email.setCustomValidity("");
+        email.style.background = "#ffffff"
+      }
+
+
+    }
+    window.addEventListener("load", comenzar, false);
+  </script>
+
+
+
+
+
+  <div class="botoninicio">
+
+    <form action="../index.html">
+      <button class="botoninicio1"><span></span><span></span><span></span><span></span> enviar</button>
+
+    </form>
+  </div>
+
+  <div class="botoninicio">
+    <form action="../html/estilos.html">
+      <button class="botoninicio1"><span></span><span></span><span></span><span></span> volver</button>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
